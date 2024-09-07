@@ -1,4 +1,8 @@
-﻿<div class="text-center">
+﻿@{
+    ViewData["Title"] = "Criar contato";
+}
+
+<div class="text-center">
     <br />
     <h1 class="display-4">Cadastrar contato</h1>
     <br />
@@ -24,6 +28,5 @@
     <br />
 
     <button type="submit" class="btn btn-primary w-100" >Adicionar</button>
-    <br />
     <a class="btn btn-secondary w-100" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
 </form>
