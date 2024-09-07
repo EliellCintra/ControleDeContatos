@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Listagem de contatos";
+}
+
+<div class="text-center">
+
+    <br />
+
+    <h1 class="display-4">Listagem de contatos</h1>
+    
+    <br />
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-success" role="button" asp-controller="Contato" asp-action="Criar">Cadastrar contato</a>
+    </div>
+
+    <br />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Celular</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>mark@hotmail.com</td>
+                <td>12 91111-1111</td>
+                <td>
+                    <a role="button" class="btn btn-primary btn-sm">Editar</a>
+                    <a role="button" class="btn btn-secondary btn-sm">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>jacob@hotmail.com</td>
+                <td>12 91111-1111</td>
+                <td>
+                    <a role="button" class="btn btn-primary btn-sm">Editar</a>
+                    <a role="button" class="btn btn-secondary btn-sm">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>João</td>
+                <td>joão@hotmail.com</td>
+                <td>12 91111-1111</td>
+                <td>
+                    <a role="button" class="btn btn-primary btn-sm">Editar</a>
+                    <a role="button" class="btn btn-secondary btn-sm">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
