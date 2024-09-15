@@ -6,16 +6,18 @@ namespace ControleDeContatos.Controllers
 {
     public class ContatoController : Controller
     {
-        public readonly iContatoRepositorio ContatoRepositorio;
+        public readonly iContatoRepositorio _contatoRepositorio;
 
         public ContatoController(iContatoRepositorio contatoRepositorio)
         {
-            ContatoRepositorio = contatoRepositorio;
+            _contatoRepositorio = contatoRepositorio;
         }
 
         public IActionResult Index()
         {
-            return View();
+            List<ContatoModel> contatos = _contatoRepositorio.BuscarTodos();
+
+            return View(contatos);
         }
 
         public IActionResult Criar()
@@ -36,7 +38,7 @@ namespace ControleDeContatos.Controllers
         [HttpPost]
         public IActionResult Criar(ContatoModel contato) 
         {
-            ContatoRepositorio.Adicionar(contato);
+            _contatoRepositorio.Adicionar(contato);
             return RedirectToAction("Index");
         }
     }
