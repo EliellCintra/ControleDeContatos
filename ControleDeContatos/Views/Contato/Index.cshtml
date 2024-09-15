@@ -46,10 +46,12 @@
         <tbody>
             @if (Model != null && Model.Any())
             {
+                int contador = 1;
+
                 foreach (ContatoModel contato in Model)
                 {
                     <tr>
-                        <th scope="row">@contato.Id</th>
+                        <th scope="row">@contador</th>
                         <td>@contato.Nome</td>
                         <td>@contato.Email</td>
                         <td>@contato.Celular</td>
@@ -58,6 +60,7 @@
                             <a role="button" class="btn btn-danger btn-sm" asp-route-id="@contato.Id" asp-controller="Contato" asp-action="ApagarConfirmacao">Excluir</a>
                         </td>
                     </tr>
+                    contador++;
                 }    
             }
         </tbody>
