@@ -1,9 +1,16 @@
+using ControleDeContatos.Data;
+using ControleDeContatos.Repositório;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-    //.AddRazorRuntimeCompilation();
+//.AddRazorRuntimeCompilation();
 
+var connectionString = builder.Configuration.GetConnectionString("DataBase");
+builder.Services.AddDbContext<BancoContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+builder.Services.AddScoped<iContatoRepositorio, ContatoRepositorio>();
 
 var app = builder.Build();
 
