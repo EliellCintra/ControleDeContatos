@@ -20,3 +20,39 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.field-validation-error {
+    color: #e01d1d;
+}
+/*
+.close {
+    position:absolute;
+    right:-10px;
+    top:-15px;
+    border-radius: 15px;
+    width: 30px;
+    height: 31px;
+}*/
+
+.btn-close {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #ff4d4d; /* Cor inicial do botão */
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: absolute;
+    width: 30px;
+    height: 31px;
+    right: 10px;
+    top: 9px;
+}
+
+.btn-close:hover {
+    color: #ff1a1a; /* Cor ao passar o mouse */
+    transform: scale(1.2); /* Aumenta levemente o botão ao passar o mouse */
+}
+
+.btn-close:focus {
+    outline: none; /* Remove a borda ao focar */
+    box-shadow: none; /* Remove o sombreamento */
+}
